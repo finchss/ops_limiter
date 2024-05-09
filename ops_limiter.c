@@ -9,6 +9,6 @@ struct ops_limiter_T *ops_limiter_new(uint64_t intervals, uint64_t ops) {
 	ret->intervals = intervals;
 	ret->ops = ops;
 	ret->ppi = ret->ops / intervals;
-	ZenTimerStart(&ret->zt);
+	ops_ZenTimerStart(&ret->zt);
 	return ret;
 }
